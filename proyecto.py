@@ -23,7 +23,7 @@ def filtrar_registros(campo, valor, registros):
         if valor.lower() in registro[campo].lower():
             resultados.append(registro)
     return resultados
-
+@app.route('/', methods=['GET', 'POST'])
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
